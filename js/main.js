@@ -14,7 +14,7 @@ function initApp() {
 }
 
 function obtenerDatos() {
-  fetch("./js/data.json")
+  fetch("/js/data.json")
     .then((res) => res.json())
     .then((json) => sumarProductosArray(json))
     .catch((error) =>

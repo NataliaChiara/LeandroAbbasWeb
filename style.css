@@ -1,13 +1,13 @@
 @font-face {
   font-family: "norwester";
-  src: url("/fonts/norwester.woff") format("woff");
+  src: url("./fonts/norwester.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "rubik";
-  src: url("/fonts/Rubik-Light.ttf") format("TrueType");
+  src: url("./fonts/Rubik-Light.ttf") format("TrueType");
   font-style: normal;
   font-weight: normal;
 }
