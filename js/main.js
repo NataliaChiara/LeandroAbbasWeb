@@ -1,6 +1,92 @@
 // ARRAY, ELEMENTOS Y FUNCIONES
 
-let coleccionProd = [];
+let coleccionProd = [
+  {
+    id: 1,
+    title: "Lorem Ipsum",
+    price: 11.111,
+    description: "Lorem ipsum dolor sit amet.",
+    image: "./img/mesa1.jfif",
+    galeria: [
+      {
+        id: 2,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa2.jfif",
+      },
+      {
+        id: 3,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa3.jfif",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Lorem Ipsum",
+    price: 11.111,
+    description: "Lorem ipsum dolor sit amet.",
+    image: "./img/mesa6.jfif",
+    galeria: [
+      {
+        id: 4,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa4.jfif",
+      },
+      {
+        id: 5,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa8.jfif",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Lorem Ipsum",
+    price: 11.111,
+    description: "Lorem ipsum dolor sit amet.",
+    image: "./img/mesa9.jfif",
+    galeria: [
+      {
+        id: 7,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa7.jfif",
+      },
+      {
+        id: 10,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/mesa10.jfif",
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: "Lorem Ipsum",
+    price: 11.111,
+    description: "Lorem ipsum dolor sit amet.",
+    image: "./img/Lampara2.jpg",
+    galeria: [
+      {
+        id: 11,
+        title: "Lorem Ipsum",
+        price: 11.111,
+        description: "Lorem ipsum dolor sit amet.",
+        image: "./img/lampara1.jpg",
+      },
+    ],
+  },
+];
 
 const main = document.getElementById("main");
 
@@ -9,21 +95,7 @@ let i = 1;
 initApp();
 
 function initApp() {
-  obtenerDatos();
   pintarInicio();
-}
-
-function obtenerDatos() {
-  fetch("/js/data.json")
-    .then((res) => res.json())
-    .then((json) => sumarProductosArray(json))
-    .catch((error) =>
-      alert("No puedo mostrar info. Intente mas tarde " + error)
-    );
-}
-
-function sumarProductosArray(producto) {
-  coleccionProd.push(...producto);
 }
 
 function izquierdaGaleria() {
@@ -140,7 +212,6 @@ function pintarProductos() {
   coleccionProd.forEach((element) => {
     const gridProductos = document.createElement("div");
     gridProductos.classList.add("grid");
-
     gridProductos.innerHTML = `
                 <a href="#main" class="tarjetaProd" onclick="encontrarElemento(${element.id})">
                     <div class="cat">
