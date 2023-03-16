@@ -186,7 +186,6 @@ main {
 
 .tarjetaProd {
   border: 1px solid #efefef;
-  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -225,7 +224,7 @@ main {
 
 .prodZoom {
   border: 1px solid #efefef;
-  background-color: white;
+  background-color: #e3dcc2;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -277,7 +276,7 @@ p {
 
 .btnOut {
   border: none;
-  background-color: white;
+  background: none;
   cursor: pointer;
 }
 
