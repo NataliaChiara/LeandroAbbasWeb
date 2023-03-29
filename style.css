@@ -159,6 +159,9 @@ main {
 
 .logo {
   width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background-color: black;
 }
 
 .parrafo {
@@ -182,6 +185,18 @@ main {
 
 .grid {
   margin: 60px;
+}
+
+#mainFotografia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.fotografiaImg {
+  height: 90vh;
+  object-fit: contain;
 }
 
 .tarjetaProd {
@@ -225,7 +240,6 @@ main {
 .prodZoom {
   border: 1px solid #efefef;
   background-color: #e3dcc2;
-  border-radius: 10px;
   padding: 20px;
   display: flex;
   align-items: start;
@@ -265,6 +279,7 @@ main {
   flex-direction: column;
   padding-top: 20px;
   width: 200px;
+  color: black;
 }
 
 .descripcion h2,

@@ -6,21 +6,21 @@ let coleccionProd = [
     title: "Lorem Ipsum",
     price: 11.111,
     description: "Lorem ipsum dolor sit amet.",
-    image: "./img/mesa1.jfif",
+    image: "./img/productos/mesa1.jfif",
     galeria: [
       {
         id: 2,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa2.jfif",
+        image: "./img/productos/mesa2.jfif",
       },
       {
         id: 3,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa3.jfif",
+        image: "./img/productos/mesa3.jfif",
       },
     ],
   },
@@ -29,21 +29,21 @@ let coleccionProd = [
     title: "Lorem Ipsum",
     price: 11.111,
     description: "Lorem ipsum dolor sit amet.",
-    image: "./img/mesa6.jfif",
+    image: "./img/productos/mesa6.jfif",
     galeria: [
       {
         id: 4,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa4.jfif",
+        image: "./img/productos/mesa4.jfif",
       },
       {
         id: 5,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa8.jfif",
+        image: "./img/productos/mesa8.jfif",
       },
     ],
   },
@@ -52,21 +52,21 @@ let coleccionProd = [
     title: "Lorem Ipsum",
     price: 11.111,
     description: "Lorem ipsum dolor sit amet.",
-    image: "./img/mesa9.jfif",
+    image: "./img/productos/mesa9.jfif",
     galeria: [
       {
         id: 7,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa7.jfif",
+        image: "./img/productos/mesa7.jfif",
       },
       {
         id: 10,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/mesa10.jfif",
+        image: "./img/productos/mesa10.jfif",
       },
     ],
   },
@@ -75,17 +75,32 @@ let coleccionProd = [
     title: "Lorem Ipsum",
     price: 11.111,
     description: "Lorem ipsum dolor sit amet.",
-    image: "./img/Lampara2.jpg",
+    image: "./img/productos/Lampara2.jpg",
     galeria: [
       {
         id: 11,
         title: "Lorem Ipsum",
         price: 11.111,
         description: "Lorem ipsum dolor sit amet.",
-        image: "./img/lampara1.jpg",
+        image: "./img/productos/lampara1.jpg",
       },
     ],
   },
+];
+
+let coleccionFotografia = [
+  "./img/fotografia/1.jpg",
+  "./img/fotografia/2.jpg",
+  "./img/fotografia/3.jpg",
+  "./img/fotografia/4.jpg",
+  "./img/fotografia/5.jpg",
+  "./img/fotografia/6.jpg",
+  "./img/fotografia/7.jpg",
+  "./img/fotografia/8.jpg",
+  "./img/fotografia/9.jpg",
+  "./img/fotografia/10.jpg",
+  "./img/fotografia/11.jpg",
+  "./img/fotografia/12.jpg",
 ];
 
 const main = document.getElementById("main");
@@ -106,7 +121,7 @@ function izquierdaGaleria() {
     const presentacion = document.querySelector(".presentacion");
     presentacion.innerHTML = "";
     presentacion.innerHTML = `
-    <img class="imagenCentral" id="galeria" src="./img/mesa${i}.jfif">
+    <img class="imagenCentral" id="galeria" src="./img/productos/mesa${i}.jfif">
     `;
 
     containerPres.appendChild(presentacion);
@@ -115,7 +130,7 @@ function izquierdaGaleria() {
     const presentacion = document.querySelector(".presentacion");
     presentacion.innerHTML = "";
     presentacion.innerHTML = `
-    <img class="imagenCentral" id="galeria" src="./img/mesa${i}.jfif">
+    <img class="imagenCentral" id="galeria" src="./img/productos/mesa${i}.jfif">
     `;
 
     containerPres.appendChild(presentacion);
@@ -130,7 +145,7 @@ function derechaGaleria() {
     const presentacion = document.querySelector(".presentacion");
     presentacion.innerHTML = "";
     presentacion.innerHTML = `
-    <img class="imagenCentral" id="galeria" src="./img/mesa${i}.jfif">
+    <img class="imagenCentral" id="galeria" src="./img/productos/mesa${i}.jfif">
     `;
 
     containerPres.appendChild(presentacion);
@@ -140,7 +155,7 @@ function derechaGaleria() {
     const presentacion = document.querySelector(".presentacion");
     presentacion.innerHTML = "";
     presentacion.innerHTML = `
-    <img class="imagenCentral" id="galeria" src="./img/mesa${i}.jfif">
+    <img class="imagenCentral" id="galeria" src="./img/productos/mesa${i}.jfif">
     `;
 
     containerPres.appendChild(presentacion);
@@ -157,6 +172,11 @@ inicio.addEventListener("click", () => {
 const productos = document.getElementById("productos");
 productos.addEventListener("click", () => {
   pintarProductos();
+});
+
+const fotografia = document.getElementById("fotografia");
+fotografia.addEventListener("click", () => {
+  pintarFotografia();
 });
 
 const acercaDeMi = document.getElementById("acercaDeMi");
@@ -187,7 +207,7 @@ function pintarInicio() {
   mainInicio.classList.add("mainInicio");
   mainInicio.innerHTML = `
         <div class="descripcionInicio">
-            <img src="./img/logo.png" alt="logo" width="200px" class="logo">
+            <img src="./img/logo.jpg" alt="logo" width="200px" class="logo">
             <div class="parrafo">
                 <h3>Lorem ipsum</h3>
                 <p>Todas las maderas que utilizo son especies que crecen y se replantan en
@@ -224,6 +244,21 @@ function pintarProductos() {
     mainProductos.appendChild(gridProductos);
   });
   main.appendChild(mainProductos);
+}
+
+function pintarFotografia() {
+  main.innerHTML = "";
+  const mainFotografia = document.createElement("div");
+  mainFotografia.setAttribute("id", "mainFotografia");
+  coleccionFotografia.forEach((element) => {
+    const itemFotografia = document.createElement("div");
+    itemFotografia.innerHTML = `
+    <img class="fotografiaImg" src="${element}" alt"imagen">
+    `;
+
+    mainFotografia.appendChild(itemFotografia);
+  });
+  main.appendChild(mainFotografia);
 }
 
 function encontrarElemento(id) {
