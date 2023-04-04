@@ -312,7 +312,7 @@ function pintarAcerca() {
   const mainFot = document.createElement("div");
   mainFot.classList.add("mainFot");
   mainFot.innerHTML = `
-    <img src="./img/logo.jpg" width="200px">
+    <img src="./img/retrato.png" width="200px">
     <p>El origen de mi carpintería comenzó en 1973, en primer año del colegio industrial, el profesor Alfano, un
         carpintero italiano de unos 60 años en ese momento, que hablaba una mezcla de español e italiano, nos
         enseñaba el manejo de la madera con mucha paciencia y arte al mismo tiempo.
