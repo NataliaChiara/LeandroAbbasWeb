@@ -206,8 +206,8 @@ function pintarInicio() {
   const mainInicio = document.createElement("div");
   mainInicio.classList.add("mainInicio");
   mainInicio.innerHTML = `
-        <div class="descripcionInicio">
-            <img src="./img/logo.jpg" alt="logo" width="200px" class="logo">
+
+            <img align="left" src="./img/logo.jpg" alt="logo" width="200px" class="logo">
             <div class="parrafo">
                 <h3>Lorem ipsum</h3>
                 <p>Todas las maderas que utilizo son especies que crecen y se replantan en
@@ -217,7 +217,7 @@ function pintarInicio() {
                     con pintura en polvo base acuosa, o esmalte convertidor base agua. No uso pinturas con solvente
                     mineral.</p>
             </div>
-        </div>
+
 
         <hr>
 
@@ -252,6 +252,7 @@ function pintarFotografia() {
   mainFotografia.setAttribute("id", "mainFotografia");
   coleccionFotografia.forEach((element) => {
     const itemFotografia = document.createElement("div");
+    itemFotografia.classList.add("infoFotografia");
     itemFotografia.innerHTML = `
     <img class="fotografiaImg" src="${element}" alt"imagen">
     `;
@@ -310,9 +311,11 @@ function galeriaZoom(id) {
 function pintarAcerca() {
   main.innerHTML = "";
   const mainFot = document.createElement("div");
-  mainFot.classList.add("mainFot");
+  mainFot.classList.add("mainAcerca");
   mainFot.innerHTML = `
-    <img src="./img/retrato.png" width="200px">
+    <div class="imgAcercaContainer">
+      <img align="left" src="./img/retrato.png">
+    </div>
     <p>El origen de mi carpintería comenzó en 1973, en primer año del colegio industrial, el profesor Alfano, un
         carpintero italiano de unos 60 años en ese momento, que hablaba una mezcla de español e italiano, nos
         enseñaba el manejo de la madera con mucha paciencia y arte al mismo tiempo.
